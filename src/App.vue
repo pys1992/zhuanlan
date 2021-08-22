@@ -1,27 +1,28 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  <ColumnList :list="data"></ColumnList>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
-import HelloWorld from './components/HelloWorld.vue'
+<script setup lang="ts">
+import ColumnList, { ColumnProps } from './components/ColumnList.vue'
 
-export default defineComponent({
-  name: 'App',
-  components: {
-    HelloWorld
+const data: ColumnProps[] = [
+  {
+    id: 1,
+    title: 'test1',
+    description: 'description1',
+    avatar: 'https://cdn.jsdelivr.net/gh/pys1992/storage@main/20210820005347.png'
+  },
+  {
+    id: 2,
+    title: 'test2',
+    description: 'description2',
+    avatar: 'https://cdn.jsdelivr.net/gh/pys1992/storage@main/20210820005347.png'
+  },
+  {
+    id: 3,
+    title: 'test3',
+    description: 'description3',
+    avatar: 'https://cdn.jsdelivr.net/gh/pys1992/storage@main/20210820005347.png'
   }
-})
+]
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
